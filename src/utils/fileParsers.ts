@@ -160,7 +160,7 @@ export const markdownToHtml = (markdown: string): string => {
       paragraph = flushParagraph(paragraph, html);
       const nextType: ListType = unordered ? 'ul' : 'ol';
       if (listType !== nextType) {
-        listType = closeList(listType, html);
+        closeList(listType, html);
         html.push(`<${nextType}>`);
         listType = nextType;
       }
@@ -223,9 +223,7 @@ const parsePdf = async (file: File): Promise<Article> => {
     const page = await pdf.getPage(pageNumber);
     const { items } = await page.getTextContent();
     pages.push(
-      items
-        .map((item) => ('str' in item ? item.str + (item.hasEOL ? '\n' : '') : ''))
-        .join(''),
+      items.map((item) => ('str' in item ? item.str + (item.hasEOL ? '\n' : '') : '')).join(''),
     );
   }
   await pdf.destroy();
