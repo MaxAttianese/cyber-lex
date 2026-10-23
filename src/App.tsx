@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import logo from './assets/logo.jpeg';
 import ArticleReader from './components/ArticleReader';
 import FileUploader from './components/FileUploader';
+import Header from './components/Header';
 import ParticleBackground from './components/ParticleBackground';
 import Sidebar from './components/Sidebar';
 import { defaultArticles } from './data/defaultArticles';
@@ -34,22 +34,7 @@ const App = () => {
       <ParticleBackground />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 md:px-8 md:py-10">
-        <header className="flex w-full items-center justify-between gap-4 rounded-xl border border-purple-500/30 bg-black/40 p-5 shadow-neon backdrop-blur-md">
-          <div className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="CyberLex logo"
-              className="h-10 w-10 animate-pulse rounded-lg object-contain shadow-neon"
-            />
-            <h1 className="font-orbitron bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-3xl font-bold uppercase tracking-widest text-transparent md:text-4xl">
-              CYBERLEX
-            </h1>
-          </div>
-
-          <span className="rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1 font-body text-xs uppercase tracking-widest text-purple-200">
-            v0.1 · beta
-          </span>
-        </header>
+        <Header />
 
         <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
           <aside className="flex flex-col gap-6">
