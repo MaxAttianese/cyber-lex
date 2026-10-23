@@ -19,6 +19,11 @@ const ArticleItem = ({ article, selected, onSelect, onDelete }: ArticleItemProps
         selected ? selectedClasses : idleClasses
       }`}
     >
+      {article.language && (
+        <span className="shrink-0 rounded-lg border border-purple-500/30 bg-black/40 px-1.5 py-0.5 font-orbitron text-[9px] font-bold uppercase tracking-widest text-fuchsia-400 shadow-[0_0_8px_rgba(217,70,239,0.4)]">
+          {article.language}
+        </span>
+      )}
       <button
         type="button"
         onClick={() => onSelect(article.id)}
