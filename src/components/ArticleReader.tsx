@@ -35,6 +35,11 @@ const ArticleReader = ({ article }: ArticleReaderProps) => {
         >
           {article.title}
         </h1>
+        {article.language && (
+          <span className="mt-3 inline-block w-fit rounded-lg border border-purple-500/30 bg-black/40 px-3 py-1 font-orbitron text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 shadow-[0_0_10px_rgba(217,70,239,0.5)] backdrop-blur-md">
+            {article.language}
+          </span>
+        )}
       </header>
 
       <div className="article-body" dangerouslySetInnerHTML={{ __html: article.content }} />

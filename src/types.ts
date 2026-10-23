@@ -6,4 +6,6 @@ export interface Article {
   /** ISO 8601 */
   date: string;
   isEasterEgg?: boolean;
+  /** Detected language: 'IT', 'EN' or 'MIX'. */
+  language?: string;
 }

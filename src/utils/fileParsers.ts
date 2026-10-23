@@ -27,11 +27,37 @@ const createId = (): string =>
     ? crypto.randomUUID()
     : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
+const EN_KEYWORDS = ['the', 'is', 'of', 'and'];
+const IT_KEYWORDS = ['il', 'la', 'di', 'e'];
+
+const countWords = (words: string[], keywords: string[]): number =>
+  words.filter((word) => keywords.includes(word)).length;
+
+/**
+ * Guesses the language from common function words. Returns 'EN' when English keywords
+ * clearly dominate, 'IT' when Italian ones do, and 'MIX' otherwise (including no matches).
+ */
+export const detectLanguage = (text: string): 'IT' | 'EN' | 'MIX' => {
+  const words = text.toLowerCase().match(/\p{L}+/gu) ?? [];
+  const en = countWords(words, EN_KEYWORDS);
+  const it = countWords(words, IT_KEYWORDS);
+  const total = en + it;
+  if (total === 0) return 'MIX';
+
+  const enRatio = en / total;
+  if (enRatio >= 0.7) return 'EN';
+  if (enRatio <= 0.3) return 'IT';
+  return 'MIX';
+};
+
+const stripTags = (html: string): string => html.replace(/<[^>]*>/g, ' ');
+
 const buildArticle = (title: string, html: string): Article => ({
   id: createId(),
   title,
   content: html,
   date: new Date().toISOString(),
+  language: detectLanguage(stripTags(html)),
 });
 
 const isSubtitleLine = (lines: string[], index: number): boolean => {
