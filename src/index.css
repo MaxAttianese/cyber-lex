@@ -43,7 +43,25 @@
   }
 
   .article-body p {
-    @apply my-4;
+    @apply my-4 break-words;
+  }
+
+  .article-body img,
+  .article-body video {
+    @apply h-auto max-w-full;
+  }
+
+  .article-body table {
+    @apply my-6 block max-w-full overflow-x-auto border-collapse text-sm;
+  }
+
+  .article-body th,
+  .article-body td {
+    @apply border border-purple-500/30 px-3 py-2 text-left align-top;
+  }
+
+  .article-body th {
+    @apply bg-purple-500/10 font-bold text-white;
   }
 
   .article-body ul,

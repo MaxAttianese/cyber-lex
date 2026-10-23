@@ -36,8 +36,8 @@ const App = () => {
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 md:px-8 md:py-10">
         <Header />
 
-        <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
-          <aside className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+          <aside className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-2 lg:flex lg:flex-col">
             <FileUploader onArticleReady={handleNewArticle} />
             <Sidebar
               presets={defaultArticles}
