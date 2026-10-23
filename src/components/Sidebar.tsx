@@ -15,7 +15,7 @@ const ArticleItem = ({ article, selected, onSelect, onDelete }: ArticleItemProps
 
   return (
     <li
-      className={`flex items-center gap-2 rounded-lg border px-3 py-2 transition ${
+      className={`flex min-w-0 items-center gap-2 rounded-lg border px-3 py-2 transition ${
         selected ? selectedClasses : idleClasses
       }`}
     >
@@ -28,7 +28,7 @@ const ArticleItem = ({ article, selected, onSelect, onDelete }: ArticleItemProps
         type="button"
         onClick={() => onSelect(article.id)}
         aria-current={selected ? 'true' : undefined}
-        className={`flex-1 truncate text-left font-body text-sm font-medium ${titleClasses}`}
+        className={`min-w-0 flex-1 truncate py-1 text-left font-body text-sm font-medium ${titleClasses}`}
       >
         {article.title}
       </button>
@@ -37,7 +37,7 @@ const ArticleItem = ({ article, selected, onSelect, onDelete }: ArticleItemProps
           type="button"
           onClick={() => onDelete(article.id)}
           aria-label={`Delete ${article.title}`}
-          className="rounded px-2 text-lg leading-none text-purple-300/40 transition hover:text-pink-500"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded text-lg leading-none text-purple-300/40 transition hover:text-pink-500"
         >
           ×
         </button>
