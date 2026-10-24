@@ -1,6 +1,7 @@
 import type { Article } from '../types';
 
 const GITHUB_URL = 'https://github.com/MaxAttianese/cyber-lex';
+const APP_URL = 'http://cyber-2iwoiokvb-maxattianeses-projects.vercel.app';
 
 export const defaultArticles: Article[] = [
   {
@@ -21,7 +22,7 @@ export const defaultArticles: Article[] = [
 </ul>
 <h2>Embracing change</h2>
 <p>The tech sector has always been synonymous with evolution. Being reluctant to use AI means giving up a force multiplier that not only allows you to be more productive at work but also helps you find the time to develop useful and fulfilling personal tools. Artificial intelligence is not a threat to the profession; it offers the opportunity to delegate mere typing so you can focus on what really matters: solving complex problems, making architectural decisions, and, why not, having the time to leave a personal mark in the form of an easter egg in the source code, reclaiming that creative space that makes programming a true art.</p>
-<p><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">Github</a><br /><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">CyberLex</a></p>
+<p><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">Github</a><br /><a href="${APP_URL}" target="_blank" rel="noopener noreferrer">CyberLex</a></p>
 `,
     date: '2026-10-23T09:00:00.000Z',
     language: 'EN',
@@ -44,7 +45,7 @@ export const defaultArticles: Article[] = [
 </ul>
 <h2>Abbracciare il cambiamento</h2>
 <p>Il settore tech è da sempre sinonimo di evoluzione. Essere restii all'utilizzo dell'IA significa rinunciare a un moltiplicatore di forze che permette non solo di essere più produttivi sul lavoro, ma anche di ritrovare il tempo per sviluppare strumenti personali utili e appaganti. L'intelligenza artificiale non rappresenta una minaccia per la professione; offre l'opportunità di delegare la mera battitura per concentrarsi su ciò che conta davvero: risolvere problemi complessi, prendere decisioni architetturali e, perché no, avere il tempo di lasciare un segno personale sotto forma di easter-egg nel codice sorgente, riappropriandosi di quello spazio creativo che rende la programmazione una vera e propria arte.</p>
-<p><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">Github</a><br /><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">CyberLex</a></p>
+<p><a href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer">Github</a><br /><a href="${APP_URL}" target="_blank" rel="noopener noreferrer">CyberLex</a></p>
 `,
     date: '2026-10-23T09:00:00.000Z',
     language: 'IT',

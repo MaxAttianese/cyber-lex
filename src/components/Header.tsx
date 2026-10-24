@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.png';
 import { useInstallPrompt } from '../hooks/useInstallPrompt';
 import { isSafariLike } from '../utils/installPlatform';
 import InstallHelp from './InstallHelp';
